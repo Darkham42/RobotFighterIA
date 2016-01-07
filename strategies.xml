@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strategies>
+	<strategy name="attaquante">
+		<question id="1">
+			<texte>Energy</texte>
+			<oui>question:2</oui>
+			<non>action:DoNothing</non>
+		</question>
+		<question id="2">
+			<texte>EnnemyForward</texte>
+			<oui>question:10</oui>
+			<non>question:3</non>
+		</question>
+		<question id="3">
+			<texte>Ennemy</texte>
+			<oui>action:Turn</oui>
+			<non>question:4</non>
+		</question>
+		<question id="4">
+			<texte>Missile</texte>
+			<oui>question:6</oui>
+			<non>question:5</non>
+		</question>
+		<question id="5">
+			<texte>FullEnergy</texte>
+			<oui>action:RandomAction</oui>
+			<non>action:DoNothing</non>
+		</question>
+		<question id="6">
+			<texte>MissileForward</texte>
+			<oui>question:9</oui>
+			<non>question:7</non>
+		</question>
+		<question id="7">
+			<texte>MissileBackward</texte>
+			<oui>question:8</oui>
+			<non>action:Move</non>
+		</question>
+		<question id="8">
+			<texte>MissileAvoid</texte>
+			<oui>action:Move</oui>
+			<non>action:Shield</non>
+		</question>
+		<question id="9">
+			<texte>MissileBeamBoom</texte>
+			<oui>action:LaserFire</oui>
+			<non>action:MissileFire</non>
+		</question>
+		<question id="10">
+			<texte>EnnemyBeamBoom</texte>
+			<oui>action:LaserFire</oui>
+			<non>action:MissileFire</non>
+		</question>
+	</strategy>
+	<strategy name="defensive">
+	    <question id="1">
+			<texte>Energy</texte>
+			<oui>question:2</oui>
+			<non>action:DoNothing</non>
+		</question>
+		<question id="2">
+			<texte>Missile</texte>
+			<oui>question:7</oui>
+			<non>question:3</non>
+		</question>
+		<question id="3">
+			<texte>Ennemy</texte>
+			<oui>question:5</oui>
+			<non>question:4</non>
+		</question>
+		<question id="4">
+			<texte>Energy</texte>
+			<oui>action:RandomAction</oui>
+			<non>action:DoNothing</non>
+		</question>
+		<question id="5">
+			<texte>EnnemyForward</texte>
+			<oui>question:6</oui>
+			<non>action:Move</non>
+		</question>
+		<question id="6">
+			<texte>EnnemyBeamBoom</texte>
+			<oui>action:MissileFire</oui>
+			<non>action:LaserFire</non>
+		</question>
+		<question id="7">
+			<texte>MissileAvoid</texte>
+			<oui>action:Move</oui>
+			<non>action:Shield</non>
+		</question>
+	</strategy>
+	<strategy name="missile">
+		<question id="1">
+			<texte>Energy</texte>
+			<oui>action:MissileFire</oui>
+			<non>action:DoNothing</non>
+		</question>
+	</strategy>
+	<strategy name="laser">
+		<question id="1">
+			<texte>Energy</texte>
+			<oui>action:LaserFire</oui>
+			<non>action:DoNothing</non>
+		</question>
+	</strategy>
+	
+</strategies>
